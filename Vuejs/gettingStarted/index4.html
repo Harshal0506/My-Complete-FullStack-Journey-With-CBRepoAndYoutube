@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" placeholder="newTask" v-model="newTask">
+        <input type="Number" placeholder="priority" v-model="priority">
+
+        <button @click="Addme"> Add me </button>
+
+        <ul>
+            <li v-for="item in items">{{item.task}}  </li>
+        </ul>
+
+
+    </div>
+    <script>
+        let app=new Vue({
+            el:"#app",
+            data:{
+                items:[
+                    {task:"first Task",priority:1},
+                    {task:"second Task",priority:2},
+                    {task:"Third Task",priority:3}
+                ],
+                newTask:'',
+                priority:1
+            },
+            methods:{
+                Addme(){
+                    this.items.push({task:this.newTask,priority:this.priority});
+                    this.newTask='';
+                    this.priority=1
+                    this.items.sort((a,b)=>a.priority-b.priority);
+                    console.log(this.items);
+                }
+
+            }
+
+        })
+    </script>
+</body>
+</html>

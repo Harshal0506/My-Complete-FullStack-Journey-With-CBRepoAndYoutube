@@ -1,0 +1,23 @@
+h1{
+    color:red;
+
+}
+p{
+    color:blue;
+}
+
+/* pseudoselector */
+
+/* p:nth-of-type(2n){
+    
+    text-align: right;
+} */
+
+p.right{
+    text-align: right;
+}
+
+#para3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+}

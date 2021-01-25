@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="inerCount">CLICK!!</button>
+        <!-- <button @click="inerCount">CLICK!!</button> -->
+        <span >{{count}}</span>
+        <!-- <span v-if="isEven">This is Even</span>
+        <span v-else="!isEven">This is Odd</span> -->
+
+        <span v-show="isEven">This is Even</span>
+        <span v-show="!isEven">This is Odd</span>
+
+
+
+    </div>
+
+    <script>
+        let app=new Vue({
+            el:"#app",
+            data:{
+                count:0,
+                isEven:true
+            },
+            methods:{
+                inerCount(){
+                    this.count++;
+                    this.isEven=this.isEven?false:true;
+                    comsole.log(this.isEven);
+
+                },
+
+               
+            }
+        })
+    </script>
+
+    
+</body>
+</html>

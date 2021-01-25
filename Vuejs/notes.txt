@@ -1,0 +1,22 @@
+const app=new Vue({
+	el:"#app",
+	data:{},
+	methods:{}
+
+
+})
+
+
+{{}} symbol
+
+v-model  --> Realtime changes
+
+v-on:click="functionName"
+@click="functionName"
+v-if="variableName"
+v-else
+v-show
+
+
+
+v-for="places in places"

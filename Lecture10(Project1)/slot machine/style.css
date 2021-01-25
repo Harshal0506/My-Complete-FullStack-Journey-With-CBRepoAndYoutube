@@ -1,0 +1,48 @@
+:root{
+    --speed:1;
+}
+
+.machine{
+    background-color: peru;
+    border:dashed brown 3px;
+    height:300px;
+    width:900px;
+    margin:50px;
+
+    display: flex;
+}
+
+#inpspeed{
+    font-size: 30pt;
+    margin-left: 30px;
+    width:50px;
+}
+
+.slot{
+    height:250px;
+    width:250px;
+    margin:20px;
+    overflow:hidden;
+
+    background-color: beige;
+    border:solid darkblue 2px;
+    text-align: center;
+    font-size: 100pt;
+    line-height:250px ;
+}
+
+.slot .value{
+    animation: splotspin 1s ease-in-out 0s infinite;
+    animation-duration: calc(1s/var(--speed));
+    
+}
+
+
+@keyframes splotspin{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(200px);
+    }
+}

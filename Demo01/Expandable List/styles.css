@@ -1,0 +1,15 @@
+ul ul{   
+    visibility: hidden;
+    height: 0;
+}
+
+/* selector1selector2 */
+/* selector1 selector2 */
+/* selector1 >selector2 */
+/* selector1+selector2 -->directly baju meh*/
+/* selector1~ selector2*/ 
+
+li:hover > ul{
+    visibility: visible;
+    height: auto;
+}

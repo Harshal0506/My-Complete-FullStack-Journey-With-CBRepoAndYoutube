@@ -1,0 +1,3 @@
+let awesomeFunction=function(){
+    console.log("OMG! This is awesome!");
+}

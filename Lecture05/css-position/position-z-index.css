@@ -1,0 +1,67 @@
+.container{
+    height: auto;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    z-index: 1;
+    
+
+    background-color: linen;
+}
+
+.item{
+    height:50px;
+    width:50px;
+    margin:10px;
+    border:dashed black 2px;
+    background-color: mediumslateblue;
+    color:white;
+    font-size: 20pt;
+    position: static;
+    z-index: 3;
+}
+
+/* 
+    relative: from original position
+    absolute: from positioned parent
+    fixed :- from viewport
+*/
+
+ .one>.three{
+     position: relative;
+     /* left:50px; */
+    z-index: 5;
+ }
+
+ .one>.six{
+     position: relative;
+     z-index: 1;
+ }
+
+ .one>.four{
+     position: absolute;
+     left:100px;
+     top:100px;
+    
+ }
+
+ .one>.five{
+     position: fixed;
+     left:100px;
+     top:100px;
+ }
+
+ .container>.two{
+     position: sticky;
+     top:30px;
+     bottom:30px;
+     z-index: 2;
+ }
+
+ .item:nth-child(5n){
+     background-color: brown;
+ }
+
+ .container:nth-child(2n){
+     background-color: aqua;
+ }

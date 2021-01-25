@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batches</title>
+
+</head>
+<body>
+    <h1>Batches In our Database</h1>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Batch</th>
+                <th>Course</th>
+                <th>Center</th>
+                <th>Year</th>
+                <th>Season</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each batches as |batch|}}
+            <tr>
+                <td>{{batch.code}}</td>
+                <td>{{batch.course.name}}</td>
+                <td>{{batch.center.name}}</td>
+                <td>{{batch.year}}</td>
+                <td>{{batch.season.name}}</td>
+                <td>{{batch.start}}
+                    <br>
+                    {{batch.end}}
+                </td>
+
+            </tr>
+                
+            {{/each}}
+        </tbody>
+    
+</body>
+</html>
